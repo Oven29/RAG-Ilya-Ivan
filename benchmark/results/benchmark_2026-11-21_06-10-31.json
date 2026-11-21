@@ -1,0 +1,265 @@
+{
+  "timestamp": "2026-11-21_06-10-31",
+  "top_k": 5,
+  "use_llm": false,
+  "metrics": {
+    "recall@5": 1.0,
+    "mrr": 0.95,
+    "crr": 1.0,
+    "llm_accuracy": null
+  },
+  "details": [
+    {
+      "id": "Q01",
+      "is_trap": false,
+      "relevant": [
+        "D03",
+        "D01",
+        "D11"
+      ],
+      "retrieved": [
+        "D01",
+        "D03",
+        "D11",
+        "D05",
+        "D23"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q02",
+      "is_trap": false,
+      "relevant": [
+        "D03",
+        "D09",
+        "D11"
+      ],
+      "retrieved": [
+        "D11",
+        "D09",
+        "D07",
+        "D03",
+        "D12"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q03",
+      "is_trap": false,
+      "relevant": [
+        "D06",
+        "D24",
+        "D04"
+      ],
+      "retrieved": [
+        "D06",
+        "D05",
+        "D25",
+        "D24",
+        "D04"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q04",
+      "is_trap": false,
+      "relevant": [
+        "D20",
+        "D16",
+        "D18"
+      ],
+      "retrieved": [
+        "D16",
+        "D18",
+        "D20",
+        "D15",
+        "D14"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q05",
+      "is_trap": false,
+      "relevant": [
+        "D25",
+        "D04",
+        "D07"
+      ],
+      "retrieved": [
+        "D25",
+        "D04",
+        "D07",
+        "D03",
+        "D11"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q06",
+      "is_trap": false,
+      "relevant": [
+        "D08",
+        "D23",
+        "D10"
+      ],
+      "retrieved": [
+        "D23",
+        "D05",
+        "D10",
+        "D28",
+        "D08"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q07",
+      "is_trap": false,
+      "relevant": [
+        "D13",
+        "D24",
+        "D07"
+      ],
+      "retrieved": [
+        "D04",
+        "D07",
+        "D24",
+        "D13",
+        "D25"
+      ],
+      "recall": 1.0,
+      "rr": 0.5,
+      "llm_acc": null
+    },
+    {
+      "id": "Q08",
+      "is_trap": false,
+      "relevant": [
+        "D20",
+        "D15",
+        "D18"
+      ],
+      "retrieved": [
+        "D20",
+        "D15",
+        "D18",
+        "D17",
+        "D11"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q09",
+      "is_trap": false,
+      "relevant": [
+        "D12",
+        "D06",
+        "D28"
+      ],
+      "retrieved": [
+        "D12",
+        "D28",
+        "D06",
+        "D13",
+        "D27"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q010",
+      "is_trap": false,
+      "relevant": [
+        "D15",
+        "D14",
+        "D11"
+      ],
+      "retrieved": [
+        "D14",
+        "D15",
+        "D11",
+        "D04",
+        "D07"
+      ],
+      "recall": 1.0,
+      "rr": 1.0,
+      "llm_acc": null
+    },
+    {
+      "id": "Q11",
+      "is_trap": true,
+      "retrieved": [
+        "D05",
+        "D29"
+      ],
+      "max_score": 4.654524423206991,
+      "refused": true
+    },
+    {
+      "id": "Q12",
+      "is_trap": true,
+      "retrieved": [
+        "D16",
+        "D05",
+        "D29",
+        "D14",
+        "D12"
+      ],
+      "max_score": 10.544648597438606,
+      "refused": true
+    },
+    {
+      "id": "Q13",
+      "is_trap": true,
+      "retrieved": [
+        "D16",
+        "D09",
+        "D29",
+        "D23",
+        "D13"
+      ],
+      "max_score": 5.272324298719303,
+      "refused": true
+    },
+    {
+      "id": "Q14",
+      "is_trap": true,
+      "retrieved": [
+        "D02",
+        "D01",
+        "D21",
+        "D24",
+        "D17"
+      ],
+      "max_score": 13.199488072169256,
+      "refused": true
+    },
+    {
+      "id": "Q15",
+      "is_trap": true,
+      "retrieved": [
+        "D15",
+        "D27",
+        "D08",
+        "D01",
+        "D02"
+      ],
+      "max_score": 4.6908952620419955,
+      "refused": true
+    }
+  ]
+}
