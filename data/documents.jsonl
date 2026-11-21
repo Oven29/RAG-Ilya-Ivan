@@ -1,0 +1,30 @@
+{"id": "D01", "file": "corpus/D01.md", "title": "Принцип единственной ответственности (SRP)", "category": "design-patterns"}
+{"id": "D02", "file": "corpus/D02.md", "title": "Принцип открытости/закрытости (OCP)", "category": "design-patterns"}
+{"id": "D03", "file": "corpus/D03.md", "title": "Паттерн Репозиторий (Repository Pattern)", "category": "design-patterns"}
+{"id": "D04", "file": "corpus/D04.md", "title": "Паттерн Фасад (Facade Pattern)", "category": "design-patterns"}
+{"id": "D05", "file": "corpus/D05.md", "title": "Паттерн Наблюдатель (Observer Pattern)", "category": "design-patterns"}
+{"id": "D06", "file": "corpus/D06.md", "title": "Circuit Breaker в микросервисах", "category": "microservices"}
+{"id": "D07", "file": "corpus/D07.md", "title": "API Gateway паттерн", "category": "microservices"}
+{"id": "D08", "file": "corpus/D08.md", "title": "Event Sourcing", "category": "microservices"}
+{"id": "D09", "file": "corpus/D09.md", "title": "CQRS (Command Query Responsibility Segregation)", "category": "microservices"}
+{"id": "D10", "file": "corpus/D10.md", "title": "Паттерн Saga для распределённых транзакций", "category": "microservices"}
+{"id": "D11", "file": "corpus/D11.md", "title": "Кэширование в высоконагруженных системах", "category": "nonfunctional"}
+{"id": "D12", "file": "corpus/D12.md", "title": "Мониторинг, трейсинг и логирование АИС", "category": "nonfunctional"}
+{"id": "D13", "file": "corpus/D13.md", "title": "Безопасность API (аутентификация, авторизация)", "category": "nonfunctional"}
+{"id": "D14", "file": "corpus/D14.md", "title": "Горизонтальное масштабирование и Stateless-архитектура", "category": "nonfunctional"}
+{"id": "D15", "file": "corpus/D15.md", "title": "Отказоустойчивость, резервирование и High Availability", "category": "nonfunctional"}
+{"id": "D16", "file": "corpus/D16.md", "title": "ГОСТ 34.602-2020 — Структура и общее содержание ТЗ", "category": "gost"}
+{"id": "D17", "file": "corpus/D17.md", "title": "ГОСТ 34.602-2020 — Требования к функциям (задачам) системы", "category": "gost"}
+{"id": "D18", "file": "corpus/D18.md", "title": "ГОСТ 34.602-2020 — Требования к видам обеспечения", "category": "gost"}
+{"id": "D19", "file": "corpus/D19.md", "title": "ГОСТ 34.602-2020 — Требования к интерфейсам и взаимодействию", "category": "gost"}
+{"id": "D20", "file": "corpus/D20.md", "title": "ГОСТ 34.602-2020 — Требования к надёжности и восстановлению", "category": "gost"}
+{"id": "D21", "file": "corpus/D21.md", "title": "Принцип подстановки Лисков (LSP) и разделения интерфейса (ISP)", "category": "design-patterns"}
+{"id": "D22", "file": "corpus/D22.md", "title": "Принцип инверсии зависимостей (DIP) и внедрение зависимостей", "category": "design-patterns"}
+{"id": "D23", "file": "corpus/D23.md", "title": "Паттерн Transactional Outbox для надёжной доставки событий", "category": "microservices"}
+{"id": "D24", "file": "corpus/D24.md", "title": "Паттерн Bulkhead и ограничение частоты (Rate Limiting)", "category": "microservices"}
+{"id": "D25", "file": "corpus/D25.md", "title": "Паттерн Database per Service и изоляция данных", "category": "microservices"}
+{"id": "D26", "file": "corpus/D26.md", "title": "Требования к защите данных и криптографической защите", "category": "nonfunctional"}
+{"id": "D27", "file": "corpus/D27.md", "title": "Требования к эргономике и технической эстетике интерфейсов", "category": "nonfunctional"}
+{"id": "D28", "file": "corpus/D28.md", "title": "Асинхронный обмен сообщениями и очереди недоставленных сообщений (DLQ)", "category": "microservices"}
+{"id": "D29", "file": "corpus/D29.md", "title": "Управление конфигурацией и профилями развёртывания (12-Factor App)", "category": "nonfunctional"}
+{"id": "D30", "file": "corpus/D30.md", "title": "Документирование архитектурных решений (ADR, C4 Model)", "category": "nonfunctional"}
