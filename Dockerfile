@@ -2,13 +2,11 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Копируем зависимости
-COPY pyproject.toml .
-RUN pip install --no-cache-dir .
-
-# Копируем код
+# Копируем проект и устанавливаем зависимости
 COPY . .
+RUN pip install --no-cache-dir .
 
 EXPOSE 8000
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+

@@ -15,19 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from app.rag.search import get_default_retriever
+from app.rag.text import DOMAIN_KEYWORDS, is_domain_relevant
 from app.api.services import validate_document
-
-DOMAIN_KEYWORDS = (
-    "архитектур", "тз", "гост", "сервис", "паттерн", "компонент", "бд",
-    "баз", "данны", "сесси", "запрос", "микросервис", "api", "srp", "saga",
-    "solid", "кэш", "событи", "очеред", "outbox", "rest", "надежност",
-    "масштабирован", "мониторинг", "требован", "пользовател", "контроллер",
-    "интерфейс", "отказоустойчив", "восстановлен", "клиент", "согласованност"
-)
-
-def is_domain_relevant(query: str) -> bool:
-    q_lower = query.lower()
-    return any(kw in q_lower for kw in DOMAIN_KEYWORDS)
 
 def load_benchmark_questions(filepath: Path):
     questions = []

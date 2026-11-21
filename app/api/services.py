@@ -15,6 +15,7 @@ from app.config import (
     TOP_K,
 )
 from app.rag.search import get_default_retriever
+from app.rag.text import is_domain_relevant
 
 logger = logging.getLogger(__name__)
 
@@ -83,13 +84,14 @@ def validate_document(text: str) -> ValidationResult:
     retriever = get_default_retriever()
     results = retriever.retrieve(text, top_k=TOP_K)
 
-    # --- Шаг 2: Порог релевантности ---
-    if not results or results[0].score < REFUSAL_THRESHOLD:
+    # --- Шаг 2: Порог релевантности и проверка предметной области ---
+    if not is_domain_relevant(text) or not results or results[0].score < REFUSAL_THRESHOLD:
         return ValidationResult(
             refused=True,
+            summary="Запрос не относится к архитектурным решениям или ТЗ.",
             refusal_reason=(
-                "Не найдено релевантных документов в базе знаний. "
-                "Пожалуйста, введите текст ТЗ или описание архитектуры ПО."
+                "Не найдено релевантных документов в базе знаний либо текст не относится "
+                "к архитектуре ПО или ТЗ. Пожалуйста, введите текст описания архитектуры."
             ),
         )
 
