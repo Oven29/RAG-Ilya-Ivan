@@ -1,0 +1,27 @@
+[project]
+name = "rag-validator"
+version = "0.1.0"
+description = "RAG-валидатор архитектурных решений и ТЗ"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "jinja2>=3.1.0",
+    "python-multipart>=0.0.9",
+    "snowballstemmer>=2.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.coverage.run]
+source = ["app"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 70

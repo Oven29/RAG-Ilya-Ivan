@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAG-валидатор архитектурных решений</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="logo-area">
+          <span class="logo-icon">🔍</span>
+          <div>
+            <h1 class="app-title">RAG-валидатор архитектурных решений</h1>
+            <p class="app-subtitle">Автоматическая проверка ТЗ и архитектуры на соответствие ГОСТам и best-practices</p>
+          </div>
+        </div>
+        <div class="header-badges">
+          <span class="badge badge-rag">RAG</span>
+          <span class="badge badge-bm25">BM25</span>
+          <span class="badge badge-llm">LLM</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="input-section card">
+        <div class="card-header">
+          <span class="card-icon">📝</span>
+          <h2 class="card-title">Введите текст для проверки</h2>
+        </div>
+        <div class="quick-examples">
+          <span class="examples-label">Быстрые примеры:</span>
+          <button type="button" class="btn-example" onclick="insertExample('srp')">1. Монолит и SRP</button>
+          <button type="button" class="btn-example" onclick="insertExample('cache')">2. Высокая нагрузка и кэш</button>
+          <button type="button" class="btn-example" onclick="insertExample('breaker')">3. Микросервисы и сбои</button>
+          <button type="button" class="btn-example" onclick="insertExample('gost')">4. ТЗ по ГОСТ 34</button>
+          <button type="button" class="btn-example btn-example-trap" onclick="insertExample('trap')">5. Ловушка</button>
+        </div>
+        <form id="validate-form" onsubmit="handleSubmit(event)">
+          <textarea
+            id="arch-text"
+            class="arch-textarea"
+            placeholder="Вставьте сюда текст технического задания или описание архитектуры.&#10;&#10;Пример:&#10;Система реализована как монолитное приложение на Java. База данных — MySQL без репликации. Кэширование не предусмотрено. Аутентификация выполняется путём передачи пароля в открытом виде через HTTP. Логирование отсутствует. Масштабирование не рассмотрено..."
+            rows="10"
+            required
+          ></textarea>
+          <div class="form-footer">
+            <span class="char-count" id="char-count">0 символов</span>
+            <button type="submit" class="btn-primary" id="submit-btn">
+              <span class="btn-text">Проверить</span>
+              <span class="spinner" id="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result-section" class="result-section" aria-live="polite" hidden>
+        <!-- Refused -->
+        <div id="refused-block" class="card refused-card" hidden>
+          <div class="refused-icon">ℹ️</div>
+          <h2 class="refused-title">Текст не относится к архитектуре ПО</h2>
+          <p class="refused-desc">Система анализирует только технические задания и архитектурные описания программного обеспечения. Пожалуйста, введите текст, связанный с проектированием систем.</p>
+        </div>
+
+        <!-- Violations -->
+        <div id="violations-block" hidden>
+          <div class="violations-header">
+            <h2 class="section-title">Обнаруженные нарушения</h2>
+            <div class="stats-row" id="stats-row"></div>
+          </div>
+          <div id="violations-list" class="violations-list"></div>
+
+          <!-- Summary -->
+          <div class="card summary-card" id="summary-card" hidden>
+            <div class="card-header">
+              <span class="card-icon">📊</span>
+              <h3 class="card-title">Итог</h3>
+            </div>
+            <p id="summary-text" class="summary-text"></p>
+          </div>
+
+          <!-- Sources -->
+          <div class="card sources-card" id="sources-card" hidden>
+            <div class="card-header">
+              <span class="card-icon">📚</span>
+              <h3 class="card-title">Использованные источники</h3>
+            </div>
+            <ul id="sources-list" class="sources-list"></ul>
+          </div>
+        </div>
+
+        <!-- Error -->
+        <div id="error-block" class="card error-card" hidden>
+          <div class="error-icon">⚠️</div>
+          <h2 class="error-title">Ошибка</h2>
+          <p id="error-text" class="error-desc"></p>
+        </div>
+
+        <!-- No violations -->
+        <div id="ok-block" class="card ok-card" hidden>
+          <div class="ok-icon">✅</div>
+          <h2 class="ok-title">Нарушений не обнаружено</h2>
+          <p class="ok-desc">Текст соответствует проверенным стандартам и best-practices.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>НИРС 2024–2025 · <strong>Иван Овчинников</strong> (RAG, BM25, бэкенд) · <strong>Илья</strong> (UI, Docker, тесты)</p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
